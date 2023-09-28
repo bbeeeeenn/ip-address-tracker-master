@@ -11,7 +11,6 @@
 
 body {
    overflow: auto;
-   height: 100vh;
 }
 
 h1 {
@@ -22,11 +21,16 @@ h1 {
    font-weight: 500;
 }
 
+h1,
+small {
+   user-select: none;
+}
+
 #search-sect {
    --border-radius: 15px;
    --button-width: 3.8rem;
 
-   height: 40vh;
+   height: 35vh;
    min-height: 320px;
    background: url(images/pattern-bg-desktop.png);
    background-repeat: no-repeat;
@@ -50,8 +54,9 @@ h1 {
    font-size: 18px;
    font-weight: 400;
    border: none;
-   width: clamp(1px, calc(86% - var(--button-width)), 500px);
+   width: clamp(1px, calc(90% - var(--button-width)), 500px);
    padding-left: 1.5rem;
+   cursor: pointer;
 }
 
 #ip-address-input::placeholder {
@@ -75,6 +80,7 @@ h1 {
 
 #submit-btn:hover {
    background-color: rgb(44, 44, 44);
+   cursor: pointer;
 }
 
 /* --------------------------------------------------- */
@@ -88,11 +94,12 @@ h1 {
    font-weight: 500;
    color: hsl(0, 0%, 59%);
    letter-spacing: 1px;
-   width: clamp(1px, 86%, 900px);
+   width: clamp(1px, 90%, 900px);
    border-radius: var(--border-radius);
    text-align: center;
    margin: auto;
    padding: 0.5rem 0;
+   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.116);
 
    position: absolute;
    left: 50%;
@@ -144,5 +151,5 @@ span {
 /* ---------------------------------------------------------------- */
 
 #map {
-   height: 60vh;
+   height: 100vh;
 }
