@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Rubik', sans-serif;
+}
+
+body {
+   overflow: auto;
+   height: 100vh;
+}
+
+h1 {
+   text-align: center;
+   padding: 2rem;
+   font-size: 1.5rem;
+   color: white;
+   font-weight: 500;
+}
+
+#search-sect {
+   --border-radius: 15px;
+   --button-width: 3.8rem;
+
+   height: 40vh;
+   min-height: 320px;
+   background: url(images/pattern-bg-desktop.png);
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-size: cover;
+   position: relative;
+}
+
+.input-wrapper {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 3.75rem;
+   width: 100%;
+   margin-bottom: 2rem;
+}
+
+#ip-address-input {
+   height: 100%;
+   border-radius: var(--border-radius) 0 0 var(--border-radius);
+   font-size: 18px;
+   font-weight: 400;
+   border: none;
+   width: clamp(1px, calc(86% - var(--button-width)), 500px);
+   padding-left: 1.5rem;
+}
+
+#ip-address-input::placeholder {
+   color: hsl(0, 0%, 59%);
+}
+
+#ip-address-input:focus {
+   outline: none;
+}
+
+#submit-btn {
+   height: 100%;
+   width: var(--button-width);
+   border: none;
+   border-radius: 0 var(--border-radius) var(--border-radius) 0;
+   background: url(images/icon-arrow.svg);
+   background-color: black;
+   background-repeat: no-repeat;
+   background-position: center center;
+}
+
+/* --------------------------------------------------- */
+
+.output-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background: white;
+   font-weight: 500;
+   color: hsl(0, 0%, 59%);
+   letter-spacing: 1px;
+   width: clamp(1px, 86%, 900px);
+   border-radius: var(--border-radius);
+   text-align: center;
+   margin: auto;
+   padding: 0.5rem 0;
+
+   position: absolute;
+   left: 50%;
+   bottom: 0;
+   transform: translate(-50%, 55%);
+   z-index: 401;
+}
+
+.output-container>div {
+   margin: 0.5rem;
+   /* outline: 1px solid blue; */
+}
+
+span {
+   display: block;
+   font-weight: 700;
+   margin-top: 0.4rem;
+   font-size: 1.4rem;
+   color: hsl(0, 0%, 20%);
+}
+
+@media (min-width:750px) {
+   h1 {
+      font-size: 2.5rem;
+   }
+
+   .input-wrapper {
+      position: absolute;
+      bottom: 75px;
+   }
+
+   .output-container {
+      width: 80vw;
+      flex-direction: row;
+      justify-content: space-evenly;
+      height: 150px;
+   }
+
+   .vertical-line {
+      border-left: 1px solid rgba(0, 0, 0, 0.404);
+      height: 60%;
+   }
+}
+
+/* ---------------------------------------------------------------- */
+
+#map {
+   height: 60vh;
+}
