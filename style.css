@@ -73,6 +73,10 @@ h1 {
    background-position: center center;
 }
 
+#submit-btn:hover {
+   background-color: rgb(44, 44, 44);
+}
+
 /* --------------------------------------------------- */
 
 .output-container {
@@ -125,6 +129,10 @@ span {
       flex-direction: row;
       justify-content: space-evenly;
       height: 150px;
+   }
+
+   .output-container>div:not(.vertical-line) {
+      width: 15rem;
    }
 
    .vertical-line {
