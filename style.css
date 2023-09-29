@@ -61,6 +61,7 @@ small {
 
 #ip-address-input::placeholder {
    color: hsl(0, 0%, 59%);
+   user-select: none;
 }
 
 #ip-address-input:focus {
